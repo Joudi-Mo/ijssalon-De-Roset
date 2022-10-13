@@ -1,17 +1,17 @@
 <?php
-    session_start();
-    // var_dump($_SESSION["is_logged_in"]);die;
+session_start();
+// var_dump($_SESSION["is_logged_in"]);die;
+// var_dump($_GET);die;
+require "../../Classes/Database.php";
+$id = $_GET['id'];
+$sql = "SELECT * FROM `products` where id = $id";
 
-    require "../../Classes/Database.php";
-    $id = $_GET['id'];
-    $sql = "SELECT * FROM `products` where product_id = $id limit 1";
-
-    if ($result = mysqli_query($conn, $sql)) {
-        $product = mysqli_fetch_assoc($result);
-        if (is_null($product)) {
-            //header("location: ../home_personeel.php");
-        }
+if ($result = mysqli_query($conn, $sql)) {
+    $product = mysqli_fetch_assoc($result);
+    if (is_null($product)) {
+        //header("location: ../home_personeel.php");
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,33 +24,37 @@
 <body id="body">
     <div style="width: 50%;" class="updateForm container mt-5">
         <form action="product_update_verwerk.php" method="POST">
-            <input type="hidden" name="product_id" value="<?php echo $product['product_id'] ?>">
+            <input type="hidden" name="id" value="<?php echo $product['id'] ?>">
             <div class="mb-3">
                 <label class="form-label" for="name">Product name:</label>
                 <input value="<?php echo $product['name'] ?>" class="form-control" type="text" name="name">
             </div>
 
             <div class="mb-3">
-                <label class="form-label" for="cost_price">Cost price:</label>
-                <input value="<?php echo $product['cost_price'] ?>" class="form-control" type="text" name="cost_price">
+                <label class="form-label" for="price_per_kg">price_per_kg:</label>
+                <input value="<?php echo $product['price_per_kg'] ?>" class="form-control" type="text" name="price_per_kg">
             </div>
-            
-            <div class="mb-3">
-                <label class="form-label" for="selling_price">Cost price:</label>
-                <input value="<?php echo $product['selling_price'] ?>" class="form-control" type="text" name="selling_price">
-            </div>
-            
-            <label class="form-label" for="category">Category:</label>
-            <select name="category" class="form-select" aria-label="Default select example">
-                <option value="saus">Saus</option>
-                <option value="broodje">Broodje</option>
-                <option value="drinks">Drinks</option>
-            </select>
 
-            <div class="mb-3">
-                <label class="form-label" for="quantity">Quantity:</label>
-                <input value="<?php echo $product['quantity'] ?>" class="form-control" type="number" name="quantity">
+            <label class="form-label" for="">Is flavor of the week?</label>
+            <div class="form-check">
+                <input value="true" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Yes
+                </label>
             </div>
+            <div class="form-check">
+                <input value="false" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    No
+                </label>
+            </div>
+
+            <label class="form-label" for="category">Category:</label>
+            <select name="category" class="form-select mb-2" aria-label="Default select example">
+                <option value="schepijs">Schepijs</option>
+                <option value="softijs">Softijs</option>
+                <option value="waterijs">Waterijs</option>
+            </select>
 
             <button class="btn btn-warning mt-2" name="submit">Update</button>
             <a class="btn btn-primary mt-2" href="producten_overzicht.php">Cancel</a>

@@ -1,29 +1,34 @@
 <?php
 if (isset($_POST["submit"])) {
 
-    $id = $_POST["product_id"];
+    $id = $_POST["id"];
     // var_dump($_POST);die;
 
-    $name = $_POST["name"];
-    $cost_price = $_POST["cost_price"];
-    $selling_price = $_POST["selling_price"];
+    $product_name = $_POST["name"];
+    $price_per_kg = trim($_POST["price_per_kg"]);
+    $flexRadioDefault = trim($_POST["flexRadioDefault"]);
     $category = $_POST["category"];
-    $quantity = $_POST["quantity"];
 
     if (
-        !empty($name)
-        && !empty($cost_price)
-        && !empty($selling_price)
+        !empty($product_name)
+        && !empty($price_per_kg)
+        && !empty($flexRadioDefault)
         && !empty($category)
     ) {
         require "../../Classes/Database.php";
 
+        if ($flexRadioDefault == "true") {
+            $flexRadioDefault = true;
+        }
+        else{
+            $flexRadioDefault = false;
+        }
+
         $sql = "UPDATE `products` SET 
-        `name`='$name',
-        `cost_price`='$cost_price',
-        `selling_price`='$selling_price',
-        `category`='$category',
-        `quantity`='$quantity' WHERE product_id ='$id' ";
+        `name`='$product_name',
+        `price_per_kg`='$price_per_kg',
+        `is_flavor_of_week`='$flexRadioDefault',
+        `category`='$category' WHERE id = '$id'";
 
         // Voer de INSERT INTO STATEMENT uit
         if (mysqli_query($conn, $sql)) {
