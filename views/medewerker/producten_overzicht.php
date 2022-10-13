@@ -29,15 +29,15 @@
             $producten = mysqli_fetch_all($result, MYSQLI_ASSOC);
         }
         ?>
-        <div class="">
+        <div class="container">
             <table class="table table-responsive table-striped">
                 <thead>
                     <tr>
                         <th></th>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>price_per_kg</th>
-                        <th>Falvor of week</th>
+                        <th>Smaak</th>
+                        <th>Price per kg</th>
+                        <th>Flavor of week</th>
                         <th>Category</th>
                     </tr>
                 </thead>
@@ -54,6 +54,7 @@
                             <td><?php echo $product["category"] ?></td>
                             <td><a href="product_delete.php?id=<?php echo $product["id"] ?>"><i class="fa-solid fa-trash text-danger"></i></a> </td>
                             <td><a class="btn btn-warning" href="product_update.php?id=<?php echo $product["id"] ?>">Update</a></td>
+                            <td><a href="#"><i class="fa-solid fa-cart-shopping text-success"></i></a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
