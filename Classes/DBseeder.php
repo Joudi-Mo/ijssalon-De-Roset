@@ -23,7 +23,7 @@ class DbSeeder
     public function fillUsers(int $number_of_records)
     {
         $statement = "INSERT INTO 
-                            `user`(`firstname`, `lastname`, `phonenumber`, `email`, `password`, `role`)
+                        `users`(`firstname`, `lastname`, `email`, `password`, `date_of_birth`, `phonenumber`, `address`, `zipcode`, `city`, `role`)
 
                       VALUES ";
 
@@ -33,9 +33,13 @@ class DbSeeder
                 "(
                     '{$this->faker->firstName()}',
                     '{$this->faker->lastName()}',
-                    '{$this->randomPhoneNumber()}',
                     '{$this->faker->safeEmail()}',
                     '{$this->randomPassword(8)}',
+                    '2005-01-01',
+                    '{$this->randomPhoneNumber()}',
+                    'NovaCollege',
+                    '1234',
+                    'Haarlem',
                     '{$this->faker->randomElement(['Klant', 'Medewerker', 'Manager'])}'
                 )";
             } else {
@@ -44,9 +48,13 @@ class DbSeeder
                 "(
                     '{$this->faker->firstName()}',
                     '{$this->faker->lastName()}',
-                    '{$this->randomPhoneNumber()}',
                     '{$this->faker->safeEmail()}',
                     '{$this->randomPassword(8)}',
+                    '2002-07-13',
+                    '{$this->randomPhoneNumber()}',
+                    'NovaCollege',
+                    '2020',
+                    'Amsterdam',
                     '{$this->faker->randomElement(['Klant', 'Medewerker', 'Manager'])}'
                 ),"; 
             }
@@ -74,20 +82,32 @@ class DbSeeder
     //Functie om de 'Products' table in te vullen met data
     public function fillProducts()
     {
-        $sql ='INSERT INTO 
-                `products`(`name`, `cost_price`, `selling_price`, `category`, `quantity`, `image`)
-            VALUES 
-                ("Mayo","0.20","0.40","Saus", "35","mayo"),
-                ("Pindasaus","0.20","0.50","Saus", "15", "pindasaus"),
-                ("Ketchup","0.30","0.60","Saus", "25", "ketchup"),
+        $sql ='INSERT INTO `products`(`name`, `price_per_kg`, `is_flavor_of_week`, `category`)
+                    VALUES
+                ("Vanilla","12.00", false,"schepijs"),
+                ("Chocolade","9.50", false,"schepijs"),
+                ("Witte Chocolade","9.65", true,"schepijs"),
+                ("Citroen","11.50", false,"schepijs"),
 
-                ("Shoarma (Lams)","4.50","6.50","Broodje", "20", "shoarma"),
-                ("Kebab","4.00","7.50","Broodje", "39", "kebab"),
-                ("Pita Kaas Gezond","3.50","5.00","Broodje", "20", "kaas gezond"),
+                ("Aardbeien","9.00", false,"schepijs"),
+                ("Banaan","12.00", false,"schepijs"),
+                ("Pistache","8.90", false,"schepijs"),
+                ("Framboos","14.50", false,"schepijs"),
 
-                ("AA Drink","1.00","3","drinks", "70", "aa-drink"),
-                ("Fanta Orange","2.00","3.50","drinks", "55", "fanta orange"),
-                ("Coca-Cola","2.00","3.50","drinks", "10", "coco cola")
+                ("Mango","10.00", false,"schepijs"),
+                ("Meloen","11.75", false,"schepijs"),
+                ("Smurfen","13.00", false,"schepijs"),
+                ("Watermeloen","11.75", false,"schepijs"),
+
+                ("Kokos","12.50", false,"schepijs"),
+                ("Hazelnoot","11.75", false,"schepijs"),
+                ("Limoen","10.00", false,"schepijs"),
+                ("Kaneel","10.00", false,"schepijs"),
+
+                ("Mokka","11.75", false,"schepijs"),
+                ("Amarena","10.00", false,"schepijs"),
+                ("Ananas","13.50", false,"schepijs"),
+                ("Bloedsinaasappel","11.75", false,"schepijs")
                 ';
 
         mysqli_query($this->conn, $sql);
@@ -101,5 +121,5 @@ echo $seeder->randomPassword(8);
 echo'<br>';
 echo $seeder->randomPhoneNumber();
 echo'<br>';
-$seeder->fillUsers(3);
-echo $seeder->fillProducts();
+// $seeder->fillUsers(10);
+// echo $seeder->fillProducts();

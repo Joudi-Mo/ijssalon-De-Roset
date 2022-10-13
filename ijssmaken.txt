@@ -1,0 +1,45 @@
+- Ijssmaken:
+Aardbei *
+Advocaat
+Amarena
+Ananas
+Appel
+Banaan
+Bosvruchten
+Cassis
+Oma’s cake
+Caramel
+Chocolade
+Citroen
+Hazelnoot
+Kaneel
+Kokos
+Malaga
+Mango *
+Meloen
+Mokka
+Smurf
+Stracciatella *
+Tiramisu
+Vanille *
+Yoghurt
+Yoghurt-bosvruchten *
+Zuppa inglese
+Pink panter
+Cookies *
+Passievrucht
+Peer
+Bloedsinaasappel
+Crème brulee
+Limoncello-Cheesecake (NIEUW!)
+Witte chocolade
+Strawberry cheesecake
+Roze koek (NIEUW!)
+Witte chocolade-pistache (NIEUW!)
+
+//* De 6 meest gekozen smaken
+-ijs categorieen:
+schepijs
+softijs
+waterijs
+
