@@ -12,7 +12,7 @@ $_SESSION["rol"] = null;
 $username = $password = $login_err = "";
 require_once "../Classes/Database.php";
 
-if (isset($_POST['submit']) && !empty($_POST["email"]) && !empty($_POST["pass"])) {
+if (isset($_POST['submit']) && !empty(trim($_POST["email"])) && !empty(trim($_POST["pass"]))) {
     $email = trim($_POST["email"]);
     $password = trim($_POST["pass"]);
 
@@ -51,8 +51,6 @@ if (isset($_POST['submit']) && !empty($_POST["email"]) && !empty($_POST["pass"])
     <?php include 'head.php'; ?>
     <link rel="stylesheet" href="style.css">
     <title>Inloggen</title>
-
-
 </head>
 
 <body class="text-center">
