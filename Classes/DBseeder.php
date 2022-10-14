@@ -82,32 +82,32 @@ class DbSeeder
     //Functie om de 'Products' table in te vullen met data
     public function fillProducts()
     {
-        $sql ='INSERT INTO `products`(`name`, `price_per_kg`, `is_flavor_of_week`, `category`)
+        $sql ='INSERT INTO `products`(`name`, `price_per_kg`, `is_flavor_of_week`, `category`, `image`)
                     VALUES
-                ("Vanille","12.00", false,"schepijs"),
-                ("Chocolade","9.50", false,"schepijs"),
-                ("Witte Chocolade","9.65", true,"schepijs"),
-                ("Citroen","11.50", false,"schepijs"),
+                ("Vanille","12.00", false,"schepijs", "vanille"),
+                ("Chocolade","9.50", false,"schepijs", "chocolade"),
+                ("Witte Chocolade","9.65", true,"schepijs", "white_chocolate"),
+                ("Citroen","11.50", false,"schepijs", "citroen"),
 
-                ("Aardbeien","9.00", false,"schepijs"),
-                ("Banaan","12.00", false,"schepijs"),
-                ("Pistache","8.90", false,"schepijs"),
-                ("Framboos","14.50", false,"schepijs"),
+                ("Aardbeien","9.00", false,"schepijs", "aardbeien"),
+                ("Banaan","12.00", false,"schepijs", "banaan"),
+                ("Pistache","8.90", false,"schepijs", "pistache"),
+                ("Framboos","14.50", false,"schepijs", "framboos"),
 
-                ("Mango","10.00", false,"schepijs"),
-                ("Meloen","11.75", false,"schepijs"),
-                ("Smurfen","13.00", false,"schepijs"),
-                ("Watermeloen","11.75", false,"schepijs"),
+                ("Mango","10.00", false,"schepijs", "mango"),
+                ("Meloen","11.75", false,"schepijs", "meloen"),
+                ("Smurfen","13.00", false,"schepijs", "smurfijs"),
+                ("Watermeloen","11.75", false,"schepijs", "watermeloen"),
 
-                ("Kokos","12.50", false,"schepijs"),
-                ("Hazelnoot","11.75", false,"schepijs"),
-                ("Limoen","10.00", false,"schepijs"),
-                ("Kaneel","10.00", false,"schepijs"),
+                ("Kokos","12.50", false,"schepijs", "kokos"),
+                ("Hazelnoot","11.75", false,"schepijs", "hazelnoot"),
+                ("Limoen","10.00", false,"schepijs", "limoen"),
+                ("Kaneel","10.00", false,"schepijs", "kaneel"),
 
-                ("Mokka","11.75", false,"schepijs"),
-                ("Amarena","10.00", false,"schepijs"),
-                ("Ananas","13.50", false,"schepijs"),
-                ("Bloedsinaasappel","11.75", false,"schepijs")
+                ("Mokka","11.75", false,"schepijs", "mokka"),
+                ("Amarena","10.00", false,"schepijs", "amarena"),
+                ("Ananas","13.50", false,"schepijs", "ananas"),
+                ("Bloedsinaasappel","11.75", false,"schepijs", "bloedsinaasappels")
                 ';
 
         mysqli_query($this->conn, $sql);
@@ -122,4 +122,4 @@ echo'<br>';
 echo $seeder->randomPhoneNumber();
 echo'<br>';
 // $seeder->fillUsers(10);
-// echo $seeder->fillProducts();
+echo $seeder->fillProducts();

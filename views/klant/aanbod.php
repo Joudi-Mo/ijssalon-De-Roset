@@ -69,7 +69,7 @@
 
 </head>
 
-<body>
+<body style="background-color: #EAEDED;">
     <?php
     include 'klant_header.php';
     require "../../Classes/Database.php";
@@ -84,35 +84,26 @@
     ?>
     <main>
 
-        <div class="album py-5 bg-light">
+        <div class="album py-5" style="background-color: #EAEDED;">
             <div class="container">
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="background-color: #EAEDED;">
 
                     <!-- Start card -->
                     <?php
                     //var_dump($users); die;
                     foreach ($producten as $product) : ?>
-                        <!-- <tr>
-                            <td><a href="../product.php?id=<?php echo $product["id"] ?>"><?php echo $product["name"] ?></a></td>
-                        </tr> -->
-
 
                         <div class="col">
                             <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <title>Placeholder</title>
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
-                                <img src="" alt="">
+                                <img src="../../Assets/<?php echo $product["image"] ?>.jpg" alt="ijs smaken">
 
-                                <div class="card-body">
+                                <div class="card-body border-top">
                                     <h2><?php echo $product["name"] ?></h2>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <a type="button" class="btn btn-sm btn-warning" href="product_update.php?id=<?php echo $product["id"] ?>">Bestel</a>
-                                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                            <a type="button" class="btn btn-sm btn-primary" href="product_update.php?id=<?php echo $product["id"] ?>">Bestel</a>
                                         </div>
                                         <span class="text-primary"><?php echo $product["price_per_kg"] ?> € per liter</span>
                                     </div>
