@@ -84,7 +84,7 @@ class DbSeeder
     {
         $sql ='INSERT INTO `products`(`name`, `price_per_kg`, `is_flavor_of_week`, `category`)
                     VALUES
-                ("Vanilla","12.00", false,"schepijs"),
+                ("Vanille","12.00", false,"schepijs"),
                 ("Chocolade","9.50", false,"schepijs"),
                 ("Witte Chocolade","9.65", true,"schepijs"),
                 ("Citroen","11.50", false,"schepijs"),
