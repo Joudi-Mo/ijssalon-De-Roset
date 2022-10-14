@@ -1,3 +1,8 @@
+Join statement: 
+SELECT orders.id, firstname as 'Klant', products.name as 'Smaak',amount,pickup,delivery,is_Recieved FROM `orders`
+JOIN users on users.id = orders.user_id
+JOIN products on products.id = orders.product_id
+
 - Ijssmaken:
 Aardbei *
 Advocaat

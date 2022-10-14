@@ -54,7 +54,6 @@
                             <td><?php echo $product["category"] ?></td>
                             <td><a href="product_delete.php?id=<?php echo $product["id"] ?>"><i class="fa-solid fa-trash text-danger"></i></a> </td>
                             <td><a class="btn btn-warning" href="product_update.php?id=<?php echo $product["id"] ?>">Update</a></td>
-                            <td><a href="#"><i class="fa-solid fa-cart-shopping text-success"></i></a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
