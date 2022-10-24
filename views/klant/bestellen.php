@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestellen</title>
 
-    <link rel="stylesheet" href="../bestellen.css">
+    <link rel="stylesheet" href="../styles/bestellen.css">
 </head>
 
 <body>

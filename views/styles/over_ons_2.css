@@ -32,7 +32,6 @@ li, a{
     align-items: center;
     padding: 10px 10%;
 }
-
 /* image logo */
 /* .logo{
     cursor: pointer;
@@ -191,7 +190,7 @@ li, a{
         padding: 0px 10px;
     } */
     li, a{
-        font-size: 12px;
+        font-size: 13px;
     }
     .logo{
         font-size: 28px;
