@@ -100,12 +100,12 @@
 
                                 <div class="card-body border-top">
                                     <h2><?php echo $product["name"] ?></h2>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">De allelekkerste smaken vind je bij De Roset</p>
                                     <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-primary"><?php echo $product["price_per_kg"] ?> € per liter</span>
                                         <div class="btn-group">
                                             <a type="button" class="btn btn-sm btn-primary" href="product_update.php?id=<?php echo $product["id"] ?>">Bestel</a>
                                         </div>
-                                        <span class="text-primary"><?php echo $product["price_per_kg"] ?> € per liter</span>
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+:root{
+    --primary: #FC7D7D;
+    --primary_alt: #d87171;
+    --light: #eee;
+    --dark_accent: #24252A;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #CFCFCF;
+
+
+}
+/* Start navbar */
+li, a{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--dark_accent);
+    text-decoration: none;
+}
+
+.header{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10%;
+}
+/* image logo */
+/* .logo{
+    cursor: pointer;
+    width: 43px;
+    height: 43px;
+    margin-right: auto;
+} */
+.logo{
+    color: var(--dark_accent);
+    font-weight: bold;
+    font-size: 32px;
+    margin-right: auto;
+
+}
+
+.logo i{
+    margin-right: 10px;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: var(--light);
+}
+.nav_links li a.active{
+    color: var(--light);
+    border-bottom: 2px solid #eee;
+}
+
+.account{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;  
+    border: none;
+    border-radius: 150px;
+    transition: all 0.3s ease 0s;
+}
+.account:hover{
+    opacity: 0.8;
+}
+/* End navbar */
+
+/* Start content */
+.content{
+    max-width: 1440px;
+    margin: 10px auto;
+    padding: 10px;
+} 
+.container{
+    display: grid;
+    /* grid-template-columns: 1fr 5fr; */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 3fr;
+    gap: 20px;
+    height: 100vh;
+
+}
+.dag, .main, .populaire{
+    background-color: var(--light);
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+.main{
+    grid-column: 1 / 5;
+    grid-row: 1/3;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 0;
+}
+.over_ons_tekst{
+        /* background-color: orange; */
+        padding: 10px;
+
+}
+.title{
+    /* background-color: orange; */
+}
+ .main p{
+    /* background-color: yellow; */
+}
+.main-img{
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background: url('../Assets/Scoops-kinds-ice-cream.jpg');
+    background-size: cover;
+
+}
+.main-img{
+
+}
+.dag, .populaire{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+}
+.smaak{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.smaak_img{
+    background-color: #FC5A5A ;
+    border: none;
+    border-radius: 150px;
+    height: 75px;
+    width: 75px;
+    /* align-self: center; */
+}
+.smaak_naam{
+    margin-left: 15px;
+}
+.bestel{
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    padding: 5px 15px;
+    color: var(--dark_accent);
+
+}
+.bestel:hover{
+    background-color: var(--light);
+    color: var(--primary);
+    transition: all 0.4s ease 0s;
+}
+/* .populaire .smaak_img{
+    border: none;
+    border-radius: 50px;
+}
+.populaire .smaak_img1{
+    background-color: #E7D596;
+}
+.populaire .smaak_img2{
+    background-color: aqua;
+}
+.populaire .smaak_img3{
+    background-color: #8C4307;
+} */
