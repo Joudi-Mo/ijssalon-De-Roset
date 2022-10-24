@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Over ons</title>
-    <link rel="stylesheet" href="../over_ons.css">
+    <link rel="stylesheet" href="../styles/over_ons.css">
     <!-- Fontawesoe icons -->
     <script src="https://kit.fontawesome.com/a333f4247d.js" crossorigin="anonymous"></script>
 </head>
@@ -35,7 +35,33 @@
                 <div class="over_ons_tekst">
 
                     <h1 class="title">Over ons</h1>
-                    <p>IJs is een gezoet bevroren voedsel dat meestal als snack of dessert wordt gegeten. Het kan worden gemaakt van melk of room en is op smaak gebracht met een zoetstof, suiker of een alternatief, en een kruid, zoals cacao of vanille, of met fruit zoals aardbeien of perziken. Het kan ook worden gemaakt door een gearomatiseerde roombasis en vloeibare stikstof samen te kloppen. Naast stabilisatoren wordt soms ook kleurstof toegevoegd. Het mengsel wordt afgekoeld tot onder het vriespunt van water en geroerd om luchtruimten op te nemen en om de vorming van detecteerbare ijskristallen te voorkomen. Het resultaat is een glad, halfvast schuim dat vast is bij zeer lage temperaturen (onder 2 °C of 35 °F). Het wordt kneedbaarder naarmate de temperatuur stijgt.</p>
+                    <p>
+                        IJs is een gezoet bevroren voedsel dat meestal als snack of dessert wordt gegeten.
+                        Het kan worden gemaakt van melk of room en is op smaak gebracht met een zoetstof,
+                        suiker of een alternatief, en een kruid, zoals cacao of vanille, of met fruit zoals
+                        aardbeien of perziken. Het kan ook worden gemaakt door een gearomatiseerde roombasis
+                        en vloeibare stikstof samen te kloppen. Naast stabilisatoren wordt soms ook kleurstof
+                        toegevoegd. Het mengsel wordt afgekoeld tot onder het vriespunt van water en geroerd
+                        om luchtruimten op te nemen en om de vorming van detecteerbare ijskristallen te voorkomen.
+                    </p>
+                    <p>
+                        IJs is een gezoet bevroren voedsel dat meestal als snack of dessert wordt gegeten.
+                        Het kan worden gemaakt van melk of room en is op smaak gebracht met een zoetstof,
+                        suiker of een alternatief, en een kruid, zoals cacao of vanille, of met fruit zoals
+                        aardbeien of perziken. Het kan ook worden gemaakt door een gearomatiseerde roombasis
+                        en vloeibare stikstof samen te kloppen. Naast stabilisatoren wordt soms ook kleurstof
+                        toegevoegd. Het mengsel wordt afgekoeld tot onder het vriespunt van water en geroerd
+                        om luchtruimten op te nemen en om de vorming van detecteerbare ijskristallen te voorkomen.
+                    </p>
+                    <p>
+                        IJs is een gezoet bevroren voedsel dat meestal als snack of dessert wordt gegeten.
+                        Het kan worden gemaakt van melk of room en is op smaak gebracht met een zoetstof,
+                        suiker of een alternatief, en een kruid, zoals cacao of vanille, of met fruit zoals
+                        aardbeien of perziken. Het kan ook worden gemaakt door een gearomatiseerde roombasis
+                        en vloeibare stikstof samen te kloppen. Naast stabilisatoren wordt soms ook kleurstof
+                        toegevoegd. Het mengsel wordt afgekoeld tot onder het vriespunt van water en geroerd
+                        om luchtruimten op te nemen en om de vorming van detecteerbare ijskristallen te voorkomen.
+                    </p>
                 </div>
                 <!-- <img class="main-img" src="../../Assets/Scoops-kinds-ice-cream.jpg" alt="Over ons"> -->
                 <div class="main-img"></div>
