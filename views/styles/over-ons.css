@@ -36,6 +36,7 @@ body{
     font-weight: bold;
     font-size: 32px;
     margin-right: auto;
+    cursor: pointer;
 }
 .logo i{
     margin-right: 10px;
@@ -136,6 +137,11 @@ body{
 }
 /* Eind Navigatiebar */
 
+
+/* Begin hero section (main section) */
+
+/* End hero section*/
+
 /* Media queries breakpoints */
 /* @media screen and (max-width: 911px) {
 
@@ -182,7 +188,6 @@ body{
         background-color: var(--dark_accent);
         top: 60px;
         left: -100%;
-        /* left: 0; */
         text-align: center;
         transition: all .5s;
     }

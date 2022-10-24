@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Over ons</title>
-    <link rel="stylesheet" href="../styles/over_ons.css">
+    <link rel="stylesheet" href="../styles/over_ons_oud.css">
     <!-- Fontawesoe icons -->
     <script src="https://kit.fontawesome.com/a333f4247d.js" crossorigin="anonymous"></script>
 </head>

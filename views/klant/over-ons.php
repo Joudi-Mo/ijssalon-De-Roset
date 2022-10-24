@@ -16,7 +16,6 @@
     <div class="header">
         <nav>
             <label for="" class="logo"><i class="fa-solid fa-ice-cream"></i>De Roset</label>
-            <!-- <ul class="nav_links"> -->
             <ul class="list">
                 <li><a href="#">Bestellen</a></li>
                 <li><a href="#">Blog</a></li>
@@ -33,9 +32,76 @@
         </nav>
     </div>
 
+    section class="content">
+    <div class="container">
+        <!-- Hoofd content -->
+        <div class="main">
+            <div class="over_ons_tekst">
 
-    <!-- Koppeling aan JavaScript -->
-    <script src="../main.js"></script>
+                <h1 class="title">Over ons</h1>
+                <p>
+                    IJs is een gezoet bevroren voedsel dat meestal als snack of dessert wordt gegeten.
+                    Het kan worden gemaakt van melk of room en is op smaak gebracht met een zoetstof,
+                    suiker of een alternatief, en een kruid, zoals cacao of vanille, of met fruit zoals
+                    aardbeien of perziken. Het kan ook worden gemaakt door een gearomatiseerde roombasis
+                    en vloeibare stikstof samen te kloppen. Naast stabilisatoren wordt soms ook kleurstof
+                    toegevoegd. Het mengsel wordt afgekoeld tot onder het vriespunt van water en geroerd
+                    om luchtruimten op te nemen en om de vorming van detecteerbare ijskristallen te voorkomen.
+                </p>
+                <p>
+                    IJs is een gezoet bevroren voedsel dat meestal als snack of dessert wordt gegeten.
+                    Het kan worden gemaakt van melk of room en is op smaak gebracht met een zoetstof,
+                    suiker of een alternatief, en een kruid, zoals cacao of vanille, of met fruit zoals
+                    aardbeien of perziken. Het kan ook worden gemaakt door een gearomatiseerde roombasis
+                    en vloeibare stikstof samen te kloppen. Naast stabilisatoren wordt soms ook kleurstof
+                    toegevoegd. Het mengsel wordt afgekoeld tot onder het vriespunt van water en geroerd
+                    om luchtruimten op te nemen en om de vorming van detecteerbare ijskristallen te voorkomen.
+                </p>
+                <p>
+                    IJs is een gezoet bevroren voedsel dat meestal als snack of dessert wordt gegeten.
+                    Het kan worden gemaakt van melk of room en is op smaak gebracht met een zoetstof,
+                    suiker of een alternatief, en een kruid, zoals cacao of vanille, of met fruit zoals
+                    aardbeien of perziken. Het kan ook worden gemaakt door een gearomatiseerde roombasis
+                    en vloeibare stikstof samen te kloppen. Naast stabilisatoren wordt soms ook kleurstof
+                    toegevoegd. Het mengsel wordt afgekoeld tot onder het vriespunt van water en geroerd
+                    om luchtruimten op te nemen en om de vorming van detecteerbare ijskristallen te voorkomen.
+                </p>
+            </div>
+            <!-- <img class="main-img" src="../../Assets/Scoops-kinds-ice-cream.jpg" alt="Over ons"> -->
+            <div class="main-img"></div>
+        </div>
+
+        <!-- Smaak van de dag -->
+        <div class="dag">
+            <span>Smaak van de dag</span>
+
+            <div class="smaak">
+                <div class="smaak_img"></div>
+                <span class="smaak__naam">Aardbei</span>
+            </div>
+            <a class="bestel" href="">Bestel</a>
+        </div>
+
+        <!-- Populaire smaken -->
+        <div class="populaire">
+            <span>Populaire smaken</span>
+            <div class="smaak">
+                <div class="smaak_img1"></div>
+                <span class="smaak__naam">Vanille</span>
+                <div class="smaak">
+                    <div class="smaak_img2"></div>
+                    <span class="smaak__naam">Smurf</span>
+                </div>
+                <div class="smaak">
+                    <div class="smaak_img3"></div>
+                    <span class="smaak__naam">Chocolade</span>
+                </div>
+
+            </div>
+        </div>
+        </section>
+        <!-- Koppeling aan JavaScript -->
+        <script src="../main.js"></script>
 </body>
 
 </html>
