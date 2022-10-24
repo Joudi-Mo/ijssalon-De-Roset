@@ -26,10 +26,6 @@
             </ul>
         </nav>
         <a href="#" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fa fa-bars"></i>
-        </label>
     </div>
 
     <section class="content">
