@@ -93,11 +93,23 @@
 
     </section>
 
-    <footer>
-        <div class="adres"></div>
-        <div class="bezorg"></div>
-        <div class="voorwaarden"></div>
-    </footer>
+    <div class="footer_outside">
+        <footer>
+            <div class="adres">
+                <span class="heading">Overtoom 17</span>
+                <span>2013 AB</span>
+                <span>Noord-Holland</span>
+                <span>Nederland</span>
+            </div>
+            <div class="bezorg">
+                <span class="heading">Vijfhuizen</span>
+                <span>Haarlem</span>
+                <span>Heemstede</span>
+                <span>Overveen</span>
+            </div>
+            <div class="voorwaarden">Voorwaarden</div>
+        </footer>
+    </div>
 
     <!-- Koppeling aan JavaScript -->
     <script src="../main.js"></script>

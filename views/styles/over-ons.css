@@ -144,7 +144,7 @@ body{
 } 
 .container{
     max-width: 2150px;
-    height: 100vh;
+    height: 1000px;
     margin: auto;
     padding: 20px;
     display: grid;
@@ -249,8 +249,31 @@ body{
     height: 100px;
     width: 100px;
 }
-
 /* End hero section*/
+
+/* Start footer */
+.footer_outside{
+    background-color: #2C3E50;
+    background-color: var(--dark_accent);
+}
+footer{
+    max-width: 2130px;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    color: var(--light);
+    margin: auto;
+    justify-content: space-around;
+    padding: 15px;
+}
+.adres, .bezorg, .voorwaarden{
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    font-weight: bold;
+    font-size: 19px;
+}
 
 /* Media queries breakpoints */
 @media screen and (max-width: 1920px) {
@@ -278,6 +301,10 @@ body{
     .smaak_img3{
         height: 85px;
         width: 85px;
+    }
+    footer{
+        max-width: 1780px;
+        margin-top: 0;
     }
     
   }
@@ -373,10 +400,9 @@ body{
     .main p{
         font-size: 12px;
     }
-    /* .smaak_img{
-        height: 100px;
-        width: 100px;
-    } */
+    footer{
+        margin-top: 600px;
+    }
   }
   /* iPhone SE (375px)(667px) */
 @media screen and (max-width: 376px) {
@@ -435,5 +461,9 @@ body{
     .smaak_img3{
         height: 60px;
         width: 60px;
+    }
+
+    footer{
+        margin-top: 700px;
     }
   }
