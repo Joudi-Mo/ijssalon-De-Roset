@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bestellen</title>
-    <link rel="stylesheet" href="../styles/bestellen.css">
-    <link rel="icon" type="image/x-icon" href="../../Assets/ice-cream_3.png">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles/contact.css">
     <!-- Fontawesoe icons -->
     <script src="https://kit.fontawesome.com/a333f4247d.js" crossorigin="anonymous"></script>
 </head>
@@ -18,10 +17,10 @@
         <nav>
             <label for="" class="logo"><i class="fa-solid fa-ice-cream"></i>De Roset</label>
             <ul class="list">
-                <li><a href="bestellen.php" class="active">Bestellen</a></li>
+                <li><a href="bestellen.php">Bestellen</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="over-ons.php">Over ons</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="contact.php" class="active">Contact</a></li>
                 <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
             <a href="#" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
@@ -37,46 +36,33 @@
         <div class="container">
             <!-- Hoofd content -->
             <div class="main">
-                <h1 class="title">Smaken</h1>
-                <div class="smaken_container">
-                    <!-- <div class="smaakcard">
-                        <div class="smaak">
-                            <div class="smaak_kleur"></div>
-                            <span class="smaaknaam">Mango</span>
-                        </div>
-                        <div class="info">
-                            <span class="prijs">9.50€</span>
-                            <a class="bestel" href="#">Bestel</a>
-                        </div>
-                    </div>
-                    <div class="smaakcard">
-                        <div class="smaak">
-                            <div class="smaak_kleur"></div>
-                            <span class="smaaknaam">Mango</span>
-                        </div>
-                        <div class="info">
-                            <span class="prijs">9.50€</span>
-                            <a class="bestel" href="#">Bestel</a>
-                        </div>
-                    </div> -->
-
-                    <?php
-                    for ($x = 0; $x < 20; $x++) {
-                    ?>
-                        <div class="smaakcard">
-                            <div class="smaak">
-                                <div class="smaak_kleur"></div>
-                                <span class="smaaknaam">Mango</span>
-                            </div>
-                            <div class="info">
-                                <span class="prijs">9.50€</span>
-                                <a class="bestel" href="#">Bestel</a>
-                            </div>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                </div>
+                <!-- <h1 class="title">Contact</h1> -->
+                <h2 class="blogtitle">Ijssalon De Roset</h2>
+                <p class="blogtekst">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
+                    ipsam omnis laborum cum aut. Quasi, fugit modi?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
+                    ipsam omnis laborum cum aut. Quasi, fugit modi?
+                </p>
+                <p class="blogtekst">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
+                    ipsam omnis laborum cum aut. Quasi, fugit modi?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
+                    ipsam omnis laborum cum aut. Quasi, fugit modi?
+                </p>
+                <p class="blogtekst">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
+                    ipsam omnis laborum cum aut. Quasi, fugit modi?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
+                    ipsam omnis laborum cum aut. Quasi, fugit modi?
+                </p>
+                <p class="blogtekst">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
+                    ipsam omnis laborum cum aut. Quasi, fugit modi?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
+                    ipsam omnis laborum cum aut. Quasi, fugit modi?
+                </p>
+                <span class="read">Read more ...</span>
             </div>
 
             <!-- Smaak van de dag -->
