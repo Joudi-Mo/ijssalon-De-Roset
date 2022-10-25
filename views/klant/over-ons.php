@@ -73,12 +73,6 @@
             <!-- Smaak van de dag -->
             <div class="dag">
                 <h3>Smaak van de dag</h3>
-
-                <!-- <div class="smaak">
-                    <div class="smaak_img"></div>
-                    <span class="smaak__naam">Aarasdfasfdsafdsadfdbei</span>
-                </div> -->
-
                 <div class="smaak_img"></div>
                 <span class="smaak__naam">Aarbei</span>
                 <a class="bestel" href="">Bestel</a>
@@ -98,6 +92,12 @@
         </div>
 
     </section>
+
+    <footer>
+        <div class="adres"></div>
+        <div class="bezorg"></div>
+        <div class="voorwaarden"></div>
+    </footer>
 
     <!-- Koppeling aan JavaScript -->
     <script src="../main.js"></script>
