@@ -36,20 +36,30 @@
         <div class="container">
             <!-- Hoofd content -->
             <div class="main">
+                <h1 class="title">Blog</h1>
                 <div class="over_ons_content">
-                    <h1 class="title">Blog</h1>
                     <div class="blogcard">
-                        <h2 class="blogtitle">IJs en kinderen</h2>
+                        <h2 class="blogtitle">IJs is lekker</h2>
+                        <p class="blogtekst"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis recusandae, porro numquam optio in nesciunt quibusdam animi expedita nostrum reiciendis modi repellendus saepe molestiae magni eos nisi assumenda consequuntur obcaecati!</p>
+                        <span class="read">Read more ...</span>
+                    </div>
+                    <div class="blogcard blog2">
+                        <h2 class="blogtitle">Waarom ijs lekker is</h2>
                         <p class="blogtekst"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis recusandae, porro numquam optio in nesciunt quibusdam animi expedita nostrum reiciendis modi repellendus saepe molestiae magni eos nisi assumenda consequuntur obcaecati!</p>
                         <span class="read">Read more ...</span>
                     </div>
                     <div class="blogcard">
-                        <h2 class="blogtitle">IJs en kinderen</h2>
+                        <h2 class="blogtitle">IJs is gezond</h2>
+                        <p class="blogtekst"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis recusandae, porro numquam optio in nesciunt quibusdam animi expedita nostrum reiciendis modi repellendus saepe molestiae magni eos nisi assumenda consequuntur obcaecati!</p>
+                        <span class="read">Read more ...</span>
+                    </div>
+                    <div class="blogcard blog2">
+                        <h2 class="blogtitle">Top 3 smaken!</h2>
                         <p class="blogtekst"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis recusandae, porro numquam optio in nesciunt quibusdam animi expedita nostrum reiciendis modi repellendus saepe molestiae magni eos nisi assumenda consequuntur obcaecati!</p>
                         <span class="read">Read more ...</span>
                     </div>
                     <div class="blogcard">
-                        <h2 class="blogtitle">IJs en kinderen</h2>
+                        <h2 class="blogtitle">Duurste ijsjes</h2>
                         <p class="blogtekst"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis recusandae, porro numquam optio in nesciunt quibusdam animi expedita nostrum reiciendis modi repellendus saepe molestiae magni eos nisi assumenda consequuntur obcaecati!</p>
                         <span class="read">Read more ...</span>
                     </div>
