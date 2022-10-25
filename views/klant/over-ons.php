@@ -18,8 +18,8 @@
             <label for="" class="logo"><i class="fa-solid fa-ice-cream"></i>De Roset</label>
             <ul class="list">
                 <li><a href="#">Bestellen</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#" class="active">Over ons</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="over-ons.php" class="active">Over ons</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
