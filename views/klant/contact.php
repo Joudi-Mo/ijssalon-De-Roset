@@ -21,9 +21,9 @@
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="over-ons.php">Over ons</a></li>
                 <li><a href="contact.php" class="active">Contact</a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
-            <a href="#" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
+            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
             <label for="check" class="checkbtn">
                 <span></span>
                 <span></span>
@@ -37,32 +37,29 @@
             <!-- Hoofd content -->
             <div class="main">
                 <!-- <h1 class="title">Contact</h1> -->
-                <h2 class="blogtitle">Ijssalon De Roset</h2>
-                <p class="blogtekst">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
-                    ipsam omnis laborum cum aut. Quasi, fugit modi?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
-                    ipsam omnis laborum cum aut. Quasi, fugit modi?
-                </p>
-                <p class="blogtekst">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
-                    ipsam omnis laborum cum aut. Quasi, fugit modi?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
-                    ipsam omnis laborum cum aut. Quasi, fugit modi?
-                </p>
-                <p class="blogtekst">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
-                    ipsam omnis laborum cum aut. Quasi, fugit modi?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
-                    ipsam omnis laborum cum aut. Quasi, fugit modi?
-                </p>
-                <p class="blogtekst">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
-                    ipsam omnis laborum cum aut. Quasi, fugit modi?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos soluta, odio officia
-                    ipsam omnis laborum cum aut. Quasi, fugit modi?
-                </p>
-                <span class="read">Read more ...</span>
+                <h2 class="title">Ijssalon De Roset</h2>
+                <div class="contact">
+                    <div class="adres">
+                        <h3>Adres 1:</h3>
+                        <span>Burgemeester Mooijstraat 17</span>
+                        <span>1901 EP, Castricum</span>
+                        <span>T 0212 - 345 678</span>
+                    </div>
+                    <div class="adres">
+                        <h3>Adres 2:</h3>
+                        <span>Middenwaard 44</span>
+                        <span>1703 SH Heerhugowaard</span>
+                        <span>T 0287 - 654 321</span>
+                    </div>
+                    <div class="adres">
+                        <h3>Openingstijden:</h3>
+                        <span>maandag t/m vrijdag</span>
+                        <span>8:00 - 20:00</span>
+                        <span>zaterdag en zondag</span>
+                        <span>12:00 - 17:00</span>
+                        <span class="read">contact@roset.nl</span>
+                    </div>
+                </div>
             </div>
 
             <!-- Smaak van de dag -->

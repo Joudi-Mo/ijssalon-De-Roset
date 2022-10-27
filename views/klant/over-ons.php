@@ -21,9 +21,9 @@
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="over-ons.php" class="active">Over ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
-            <a href="#" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
+            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
             <label for="check" class="checkbtn">
                 <span></span>
                 <span></span>

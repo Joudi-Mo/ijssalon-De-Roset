@@ -24,7 +24,7 @@
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
-            <a href="#" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
+            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
             <label for="check" class="checkbtn">
                 <span></span>
                 <span></span>
