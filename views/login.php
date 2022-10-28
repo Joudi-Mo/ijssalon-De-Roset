@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inloggen 2</title>
+
+    <link rel="stylesheet" href="styles/login.css">
+
+    <!-- fontawesome.com -->
+    <script src="https://kit.fontawesome.com/a333f4247d.js" crossorigin="anonymous"></script>
+</head>
 <?php
 // Initialize the session
 session_start();
@@ -31,7 +45,7 @@ if (isset($_POST['submit']) && !empty(trim($_POST["email"])) && !empty(trim($_PO
         $_SESSION["role"] = $data['rol'];
         if ($data['role'] == 'gebruiker') {
             // header("location: meldingen/melding_maak.php");
-        } elseif($data['role'] == 'medewerker') {
+        } elseif ($data['role'] == 'medewerker') {
             // header("location: home_medewerker.php");
         } else {
             // header("location: home_manager.php");
@@ -44,46 +58,53 @@ if (isset($_POST['submit']) && !empty(trim($_POST["email"])) && !empty(trim($_PO
 }
 
 ?>
-<!doctype html>
-<html lang="en">
 
-<head>
-    <?php include 'head.php'; ?>
-    <link rel="stylesheet" href="style.css">
-    <title>Inloggen</title>
-</head>
+<body id="body">
+    <div class="wrapper">
+        <h2>Inloggen</h2>
+        <form action="#">
+            <p class="err-text">
+                <?php
+                if (!empty($login_err)) {
+                    echo $login_err;
+                }
+                ?>
+            </p>
+            <div class="input-box">
+                <input name="email" type="text" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+                <input name="pass" type="password" placeholder="Enter your password" required>
+            </div>
 
-<body class="text-center">
-    <div class="container px-5 py-5">
-        <div class="px-5">
-            <main class="form-signin row justify-content-center">
-                <form action="login.php" method="POST" class="col-4">
-                    <img class="mb-4" src="../assets/burger.png" width="150" height="150">
-                    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-                    <p class="text-danger">
-                        <?php
-                        if (!empty($login_err)) {
-                            echo $login_err;
-                        }
-                        ?>
-                    </p>
+            <div class="input-box button">
+                <input type="submit" value="Log in" name="submit">
+            </div>
+            <div class="text">
+                <h3>Nieuw?<a href="register.php"> Registreer je je hier!</a></h3>
+            </div>
 
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="user" name="email">
-                        <label for="floatingInput">Email</label>
-                    </div>
-                    <div class="form-floating mt-4">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="pass">
-                        <label for="floatingPassword">Password</label>
-                    </div>
 
-                    <button class="w-100 btn btn-lg btn-primary mt-4" type="submit" name="submit">Log in</button>
-                    <p class="mt-3">New? <a href="register.php">Sign up!</a></p>
-
-                    <p class="text-muted">&copy; <?php echo date("Y") ?></p>
-                </form>
-            </main>
-        </div>
+            <!-- <div class="input-box">
+                <input type="text" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <div class="policy">
+                <input type="checkbox">
+                <h3>I accept all terms & conditins</h3>
+            </div>
+            <div class="input-box button">
+                <input type="submit" value="Registreer Nu">
+            </div>
+            <div class="text">
+                <h3>Already have an acount? <a href="#">Login now</a></h3>
+            </div> -->
+        </form>
     </div>
 </body>
 

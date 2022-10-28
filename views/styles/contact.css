@@ -168,14 +168,12 @@ body{
 .title{
     padding: 15px;
 }
-.contact{
-    display: flex;
-    flex-direction: row;
-    /* margin: 20px; */
-    gap: 80px;
-    justify-content: center;
-    align-items: center;
-
+.contact2{
+    padding: 14px;
+    /* margin: 15px; */
+}
+.adres{
+    margin: 20px;
 }
 .read{
     color: var(--primary);

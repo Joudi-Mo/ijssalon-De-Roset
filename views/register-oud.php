@@ -36,7 +36,7 @@ session_start();
 
                 <div class="mb-2">
                     <label class="form-label" for="email">Email:</label>
-                    <input class="form-control" type="email" name="email">
+                    <input class="form-control" type="text" name="email">
                 </div>
 
                 <div class="mb-2">

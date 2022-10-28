@@ -22,6 +22,7 @@
                 <li><a href="over-ons.php">Over ons</a></li>
                 <li><a href="contact.php" class="active">Contact</a></li>
                 <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="../login.php">Inloggen</a></li>
             </ul>
             <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
             <label for="check" class="checkbtn">
@@ -38,7 +39,7 @@
             <div class="main">
                 <!-- <h1 class="title">Contact</h1> -->
                 <h2 class="title">Ijssalon De Roset</h2>
-                <div class="contact">
+                <div class="contact2">
                     <div class="adres">
                         <h3>Adres 1:</h3>
                         <span>Burgemeester Mooijstraat 17</span>
