@@ -1,3 +1,16 @@
+<?php
+session_start();
+// $_SESSION = [];
+// SESSION_destroy();
+// $_SESSION["is_logged_in"] = false;
+// $_SESSION["id"] = null;
+$id = $_SESSION["id"];
+// $_SESSION["username"] = null;
+// $_SESSION["role"] = null;
+if (!$_SESSION["is_logged_in"]) {
+    header("location: ../login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +25,16 @@
 </head>
 
 <body>
+    <?php
+    require "../../Classes/Database.php";
+    $sql = "SELECT * FROM `users` where id = $id";
+
+    if ($result = mysqli_query($conn, $sql)) {
+
+        $user = mysqli_fetch_assoc($result);
+    }
+    ?>
+
     <!-- Navigatiebar -->
     <div class="header">
         <nav>
@@ -37,62 +60,60 @@
             <!-- Hoofd content -->
             <div class="main">
                 <h2 class="title">Account</h2>
-                <a class="uitloggen" href="#">Uitloggen</a>
+                <a class="uitloggen" href="../login.php">Uitloggen</a>
                 <div class="edit">
-                    <form action="">
+                    <form action="account_update.php" method="POST">
+                        <input type="hidden" name="id" value="<?php echo $user['id'] ?>">
                         <div class="row">
                             <div class="column">
                                 <label for="fname">Firstname</label>
-                                <input type="text" id="fname" placeholder="Joudi">
+                                <input name="firstname" type="text" id="fname" value="<?php echo $user['firstname'] ?>">
                             </div>
                             <div class="column">
                                 <label for="lname">Lastname</label>
-                                <input type="text" id="lname" placeholder="Mohamad">
+                                <input name="lastname" type="text" id="lname" value="<?php echo $user['lastname'] ?>">
                             </div>
                         </div>
                         <div class="row">
                             <div class="column">
                                 <label for="email">Email</label>
-                                <input type="text" id="email" placeholder="Sales">
+                                <input name="email" type="text" id="email" value="<?php echo $user['email'] ?>">
                             </div>
                             <div class="column">
                                 <label for="pass">Password</label>
-                                <input type="password" id="pass" placeholder="123">
+                                <input name="pass" type="password" id="pass" value="<?php echo $user['password'] ?>">
                             </div>
                         </div>
                         <div class="row">
                             <div class="column">
                                 <label for="verjaardag">Birth date</label>
-                                <input type="date" id="verjaardag">
+                                <input name="birthday" type="date" id="verjaardag" value="<?php echo $user['date_of_birth'] ?>">
                             </div>
                             <div class="column">
                                 <label for="pnummer">Phonenumber</label>
-                                <input type="text" id="pnummer" placeholder="0612345678">
+                                <input name="pnumber" type="text" id="pnummer" value="<?php echo $user['phonenumber'] ?>">
                             </div>
                         </div>
                         <div class="row">
                             <div class="column">
                                 <label for="adres">Adres</label>
-                                <input type="text" id="adres" placeholder="straatnaam 16">
+                                <input name="adres" ype="text" id="adres" value="<?php echo $user['address'] ?>">
                             </div>
                             <div class="column">
                                 <label for="postcode">Postcode</label>
-                                <input type="text" id="postcode" placeholder="1234 AB">
+                                <input name="zipcode" type="text" id="postcode" value="<?php echo $user['zipcode'] ?>">
                             </div>
                         </div>
                         <div class="row">
                             <div class="column">
                                 <label for="stad">Stad</label>
-                                <input type="text" id="stad" placeholder="Haarlem">
-                            </div>
-                            <div class="column">
-                                <label for="rol">Rol</label>
-                                <input type="text" id="rol" placeholder="Klant">
+                                <input name="city" type="text" id="stad" value="<?php echo $user['city'] ?>">
                             </div>
                         </div>
-                        <button>Submit</button>
-                        <a class="delete" href="#">Account permanent verwijderen</a>
+                        <button name="submit">Update</button>
+                        <!-- class="btn btn-warning" href="product_update.php?id=<?php echo $product["id"] ?>" -->
                     </form>
+                    <a class="delete" href="account_delete.php?id=<?php echo $user["id"] ?>">Account permanent verwijderen</a>
                 </div>
             </div>
         </div>

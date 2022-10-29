@@ -52,14 +52,14 @@ if (isset($_POST['submit']) && !empty(trim($_POST["email"])) && !empty(trim($_PO
     }
     
     else{
-        $login_err = "Vul het formulier correct in!";
+        $login_err = "Email of wachtwoord niet correct!";
     }
     // var_dump($email, $data['email'], $password , $data['password']);
     //     die;
     mysqli_close($conn); // Sluit de database verbinding
 }
  elseif (isset($_POST['submit'])) {
-    $login_err = "Vul het formulier correct in!";
+    $login_err = "Email of wachtwoord niet correct!";
 }
 
 ?>
@@ -76,7 +76,7 @@ if (isset($_POST['submit']) && !empty(trim($_POST["email"])) && !empty(trim($_PO
                 ?>
             </p>
             <div class="input-box">
-                <input name="email" type="text" placeholder="Enter your email" required>
+                <input name="email" type="email" placeholder="Enter your email" required>
             </div>
             <div class="input-box">
                 <input name="pass" type="password" placeholder="Enter your password" required>
