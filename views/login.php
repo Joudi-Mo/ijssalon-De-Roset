@@ -20,8 +20,8 @@ $_SESSION["is_logged_in"] = false;
 $_SESSION["id"] = null;
 $_SESSION["username"] = null;
 $_SESSION["role"] = null;
-// Include database file
 $username = $password = $login_err = "";
+// Include database file
 require_once "../Classes/Database.php";
 
 if (isset($_POST['submit']) && !empty(trim($_POST["email"])) && !empty(trim($_POST["pass"]))) {
