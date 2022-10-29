@@ -25,19 +25,12 @@ session_start();
                 <li><a href="over-ons.php">Over ons</a></li>
                 <li><a href="contact.php" class="active">Contact</a></li>
                 <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <?php
-                if (!$_SESSION["is_logged_in"]) {
-                ?>
+                <?php if (!$_SESSION["is_logged_in"]) { ?>
                     <li><a href="../login.php">Inloggen</a></li>
-            </ul>
-        <?php
-                } else {
-        ?>
+            </ul><?php } else { ?>
             </ul>
             <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
-        <?php
-                }
-        ?>
+        <?php } ?>
 
         <label for="check" class="checkbtn">
             <span></span>
@@ -79,9 +72,18 @@ session_start();
 
             <!-- Smaak van de dag -->
             <div class="dag">
+                <?php
+                require "../../Classes/Database.php";
+                $sql = "SELECT * FROM `products` where is_flavor_of_week = 1";
+
+                if ($result = mysqli_query($conn, $sql)) {
+
+                    $product = mysqli_fetch_assoc($result);
+                }
+                ?>
                 <h3>Smaak van de dag</h3>
-                <div class="smaak_img"></div>
-                <span class="smaak__naam">Aarbei</span>
+                <div class="smaak_img" style="background-color: <?php echo $product['smaak_kleur'] ?> ;"></div>
+                <span class="smaak__naam"><?php echo $product['name'] ?></span>
                 <a class="bestel" href="">Bestel</a>
             </div>
 

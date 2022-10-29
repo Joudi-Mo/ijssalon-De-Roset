@@ -83,9 +83,18 @@ session_start();
 
             <!-- Smaak van de dag -->
             <div class="dag">
+                <?php
+                require "../../Classes/Database.php";
+                $sql = "SELECT * FROM `products` where is_flavor_of_week = 1";
+
+                if ($result = mysqli_query($conn, $sql)) {
+
+                    $product = mysqli_fetch_assoc($result);
+                }
+                ?>
                 <h3>Smaak van de dag</h3>
-                <div class="smaak_img"></div>
-                <span class="smaak__naam">Aarbei</span>
+                <div class="smaak_img" style="background-color: <?php echo $product['smaak_kleur'] ?> ;"></div>
+                <span class="smaak__naam"><?php echo $product['name'] ?></span>
                 <a class="bestel" href="">Bestel</a>
             </div>
 

@@ -1,13 +1,5 @@
 <?php
 session_start();
-// $_SESSION = [];
-// SESSION_destroy();
-// $_SESSION["is_logged_in"] = false;
-// $_SESSION["id"] = null;
-// $_SESSION["username"] = null;
-// $_SESSION["role"] = null;
-if ($_SESSION["is_logged_in"]) {
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,14 +40,14 @@ if ($_SESSION["is_logged_in"]) {
                 ?>
                     <li><a href="../login.php">Inloggen</a></li>
             </ul>
-                <?php
-                        } else {
-                ?>
-                    </ul>
-                    <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
-                <?php
-                        }
-                ?>
+        <?php
+                } else {
+        ?>
+            </ul>
+            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
+        <?php
+                }
+        ?>
 
         <label for="check" class="checkbtn">
             <span></span>
@@ -71,27 +63,6 @@ if ($_SESSION["is_logged_in"]) {
             <div class="main">
                 <h1 class="title">Smaken</h1>
                 <div class="smaken_container">
-                    <!-- <div class="smaakcard">
-                        <div class="smaak">
-                            <div class="smaak_kleur"></div>
-                            <span class="smaaknaam">Mango</span>
-                        </div>
-                        <div class="info">
-                            <span class="prijs">9.50€</span>
-                            <a class="bestel" href="#">Bestel</a>
-                        </div>
-                    </div>
-                    <div class="smaakcard">
-                        <div class="smaak">
-                            <div class="smaak_kleur"></div>
-                            <span class="smaaknaam">Mango</span>
-                        </div>
-                        <div class="info">
-                            <span class="prijs">9.50€</span>
-                            <a class="bestel" href="#">Bestel</a>
-                        </div>
-                    </div> -->
-
                     <?php
                     if ($_SESSION["is_logged_in"]) {
 
@@ -121,9 +92,17 @@ if ($_SESSION["is_logged_in"]) {
 
             <!-- Smaak van de dag -->
             <div class="dag">
+                <?php
+                $sql = "SELECT * FROM `products` where is_flavor_of_week = 1";
+
+                if ($result = mysqli_query($conn, $sql)) {
+
+                    $product = mysqli_fetch_assoc($result);
+                }
+                ?>
                 <h3>Smaak van de dag</h3>
-                <div class="smaak_img"></div>
-                <span class="smaak__naam">Aarbei</span>
+                <div class="smaak_img" style="background-color: <?php echo $product['smaak_kleur'] ?> ;"></div>
+                <span class="smaak__naam"><?php echo $product['name'] ?></span>
                 <a class="bestel" href="">Bestel</a>
             </div>
 
