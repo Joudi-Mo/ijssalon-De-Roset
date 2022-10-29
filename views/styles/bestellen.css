@@ -215,6 +215,10 @@ body{
     border-top: solid 1px var(--dark_accent);
     padding-top: 9px;
 }
+.notlog{
+    align-items: center;
+    justify-content: center;
+}
 .dag{
     grid-column: 5/6;
     grid-row: 1/2; 

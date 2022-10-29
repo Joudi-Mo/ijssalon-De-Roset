@@ -64,7 +64,7 @@ label{
     font-style: 14px;
     /* font-weight: 500; */
 }
-input{
+input, select{
     width: 100%;
     font-weight: 400;
     padding: 8px 10px;
@@ -76,7 +76,8 @@ input{
     border-radius: 6px;
     transition: all 0.3s ease;
 }
-input:focus{
+input:focus,
+select:focus{
     outline: none;
     border-color: var(--primary);
 }

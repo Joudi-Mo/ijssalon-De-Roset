@@ -1,3 +1,14 @@
+<?php
+session_start();
+// $_SESSION = [];
+// SESSION_destroy();
+// $_SESSION["is_logged_in"] = false;
+// $_SESSION["id"] = null;
+// $_SESSION["username"] = null;
+// $_SESSION["role"] = null;
+if ($_SESSION["is_logged_in"]) {
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +24,15 @@
 </head>
 
 <body>
+    <?php
+    require "../../Classes/Database.php";
+    $sql = "SELECT * FROM `products`";
+
+    if ($result = mysqli_query($conn, $sql)) {
+
+        $producten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+    ?>
     <!-- Navigatiebar -->
     <div class="header">
         <nav>
@@ -23,14 +43,25 @@
                 <li><a href="over-ons.php">Over ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li><a href="../login.php">Inloggen</a></li> 
+                <?php
+                if (!$_SESSION["is_logged_in"]) {
+                ?>
+                    <li><a href="../login.php">Inloggen</a></li>
             </ul>
-            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
-            <label for="check" class="checkbtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+                <?php
+                        } else {
+                ?>
+                    </ul>
+                    <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
+                <?php
+                        }
+                ?>
+
+        <label for="check" class="checkbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         </nav>
     </div>
 
@@ -62,18 +93,26 @@
                     </div> -->
 
                     <?php
-                    for ($x = 0; $x < 20; $x++) {
-                    ?>
-                        <div class="smaakcard">
-                            <div class="smaak">
-                                <div class="smaak_kleur"></div>
-                                <span class="smaaknaam">Mango</span>
+                    if ($_SESSION["is_logged_in"]) {
+
+
+                        //var_dump($users); die;
+                        foreach ($producten as $product) : ?>
+                            <div class="smaakcard">
+                                <div class="smaak">
+                                    <div class="smaak_kleur" style="background-color:<?php echo $product["smaak_kleur"] ?> ;"></div>
+                                    <span class="smaaknaam"><?php echo $product["name"] ?></span>
+                                </div>
+                                <div class="info">
+                                    <span class="prijs"><?php echo $product["price_per_kg"] ?>€</span>
+                                    <a class="bestel" href="#.php?id=<?php echo $product["id"] ?>">Bestel</a>
+                                </div>
                             </div>
-                            <div class="info">
-                                <span class="prijs">9.50€</span>
-                                <a class="bestel" href="#">Bestel</a>
-                            </div>
-                        </div>
+                        <?php
+                        endforeach;
+                    } else { ?>
+
+                        <h2 class="notlog"> U moet eerst ingelogd zijn om bestellingen te plaatsen</h2>
                     <?php
                     }
                     ?>
