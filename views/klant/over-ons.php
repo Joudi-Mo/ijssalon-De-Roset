@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,15 +24,24 @@
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="over-ons.php" class="active">Over ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li><a href="../login.php">Inloggen</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <?php
+                if (!$_SESSION["is_logged_in"]) {
+                ?>
+                    <li><a href="../login.php">Inloggen</a></li>
+            </ul>
+        <?php
+                } else {
+        ?>
             </ul>
             <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
-            <label for="check" class="checkbtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+        <?php
+                }
+        ?>
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
         </nav>
     </div>
 
