@@ -33,35 +33,32 @@ if (isset($_POST['submit']) && !empty(trim($_POST["email"])) && !empty(trim($_PO
         $data = mysqli_fetch_assoc($result);
     }
 
-    if ($email == $data['email'] && $password == $data['password']) {
-        // var_dump($email, $data['email'], $password , $data['password']);
-        // die;
-        // Store data in session variables
-        $_SESSION["is_logged_in"] = true;
-        $_SESSION["id"] = $data['id'];
-        $_SESSION["username"] = $data['firstname'];
-        $_SESSION["role"] = $data['role'];
 
-        if ($data['role'] == 'klant') {
-            header("location: klant/bestellen.php");
-        } 
-        else
-        {
-            header("location: medewerker/producten_overzicht.php"); 
+    if (!is_null($data) || !empty($data)) {
+        if ($email == $data['email'] && $password == $data['password']) {
+            // Store data in session variables
+            $_SESSION["is_logged_in"] = true;
+            $_SESSION["id"] = $data['id'];
+            $_SESSION["username"] = $data['firstname'];
+            $_SESSION["role"] = $data['role'];
+
+            if ($data['role'] == 'klant') {
+                header("location: klant/bestellen.php");
+            } else {
+                header("location: medewerker/producten_overzicht.php");
+            }
+        } else {
+            $login_err = "Email of wachtwoord niet correct!";
         }
     }
-    
     else{
-        $login_err = "Email of wachtwoord niet correct!";
+        $login_err = "Deze email bestaat niet";
     }
-    // var_dump($email, $data['email'], $password , $data['password']);
-    //     die;
-    mysqli_close($conn); // Sluit de database verbinding
-}
- elseif (isset($_POST['submit'])) {
-    $login_err = "Email of wachtwoord niet correct!";
-}
 
+    mysqli_close($conn); // Sluit de database verbinding
+} elseif (isset($_POST['submit'])) {
+    $login_err = "Een van de velden of beide is leeg";
+}
 ?>
 
 <body id="body">
@@ -76,10 +73,10 @@ if (isset($_POST['submit']) && !empty(trim($_POST["email"])) && !empty(trim($_PO
                 ?>
             </p>
             <div class="input-box">
-                <input name="email" type="email" placeholder="Enter your email" required>
+                <input name="email" type="email" placeholder="Enter your email">
             </div>
             <div class="input-box">
-                <input name="pass" type="password" placeholder="Enter your password" required>
+                <input name="pass" type="password" placeholder="Enter your password">
             </div>
 
             <div class="input-box button">

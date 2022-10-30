@@ -15,6 +15,7 @@ if (isset($_POST["submit"])) {
         && !empty($flexRadioDefault)
         && !empty($category)
     ) {
+        
         require "../../Classes/Database.php";
 
         if ($flexRadioDefault == "true") {
