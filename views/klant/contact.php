@@ -24,7 +24,7 @@ session_start();
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="over-ons.php">Over ons</a></li>
                 <li><a href="contact.php" class="active">Contact</a></li>
-                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <?php if (!$_SESSION["is_logged_in"]) { ?>
                     <li><a href="../login.php">Inloggen</a></li>
             </ul><?php } else { ?>

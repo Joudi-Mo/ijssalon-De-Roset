@@ -154,99 +154,70 @@ body{
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
-.main, .dag, .populaire{
+.main{
     background-color: var(--light);
     border: none;
     border-radius: 15px;
     padding: 15px;
 }
 .main{
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 1/4;
-    /* overflow: auto; */
 }
 .title{
     padding: 15px;
 }
-.contact2{
-    padding: 14px;
-    /* margin: 15px; */
-}
-.adres{
-    margin: 20px;
-}
-.read{
-    color: var(--primary);
-    font-size: 19px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.dag{
-    grid-column: 5/6;
-    grid-row: 1/2; 
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.dag>*{
-    margin: auto;
-}
 
-.smaak_img{
-    background-color: #FC5A5A ;
-    border: none;
-    border-radius: 150px;
-    height: 100px;
-    width: 100px;
-}
 
-.bestel{
-    text-decoration: none;
-    background-color: var(--primary);
-    border: 2px solid var(--primary);
-    border-radius: 50px;
-    padding: 3px 15px;
+
+form{
+    width: 100%;
+    position: relative;
+    margin: 0 auto 0 auto;
+}
+.row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px 30px;
+    margin-bottom: 20px;
+}
+label{
     color: var(--dark_accent);
-    transition: all 0.4s ease;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
 }
-.bestel:hover{
-    background-color: var(--light);
-    color: var(--primary);
+textarea, input{
+    background-color: #fff;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1.2px solid var(--grey);
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+textarea::selection, input::selection {
+    background: var(--primary);
+    color: var(--dark_accent);
+  }
+textarea{
+    resize: none;
+}
+textarea:focus, input:focus{
+    outline: none;
+    border-color: var(--primary);
+}
+button{
+    border: none;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
+    color: #fff;
+    border-radius: 3px;
 }
 
-/* Populaire smaken gedeelte */
-.populaire{
-    grid-column: 5/6;
-    grid-row: 2/4;   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.populaire>*{
-    margin: auto;
-}
-.smaak_img1{
-    background-color: #F3E5AB ;
-    border: none;
-    border-radius: 150px;
-    height: 100px;
-    width: 100px;
-}
-.smaak_img2{
-    background-color: aqua ;
-    border: none;
-    border-radius: 150px;
-    height: 100px;
-    width: 100px;
-}
-.smaak_img3{
-    background-color: #7B3F00 ;
-    border: none;
-    border-radius: 150px;
-    height: 100px;
-    width: 100px;
-}
 /* End hero section*/
 
 /* Start footer */
@@ -280,22 +251,6 @@ footer{
     }
     .container{
         max-width: 1800px;
-    }
-    .smaak_img{
-        height: 85px;
-        width: 85px;
-    }
-    .smaak_img1{
-        height: 85px;
-        width: 85px;
-    }
-    .smaak_img2{
-        height: 85px;
-        width: 85px;
-    }
-    .smaak_img3{
-        height: 85px;
-        width: 85px;
     }
     footer{
         max-width: 1780px;
@@ -364,7 +319,7 @@ footer{
         max-width: 850px;
         max-height: 950px ;
     }
-    .main, .dag, .populaire{
+    .main{
         padding: 10px;
     }
     .main{
@@ -374,19 +329,13 @@ footer{
         /* height: auto; */
         height: 1100px;
     }
-    .dag{
-        grid-column: 1/2;
-        grid-row: 3/4;   
-    }
-    .populaire{
-        grid-column: 2/6;
-        grid-row: 3/4;   
-    }
+
+    
     .main p{
         font-size: 12px;
     }
     footer{
-        margin-top: 600px;
+        margin-top: 200px;
     }
   }
   /* iPhone SE (375px)(667px) */
@@ -412,43 +361,12 @@ footer{
         grid-column: 1/6;
         grid-row: 1/2;
     }
-    .dag{
-        grid-column: 1/6;
-        grid-row: 2/3;
-        height: 165px; 
-    }
-    .populaire{
-        grid-column: 1/6;
-        grid-row: 3/4;   
-    }
-    .smaak_img{
-        height: 60px;
-        width: 60px;
-    }
+
     h3{
         font-size: 14px;
     }
-    .smaak_naam{
-        font-size: 12px;
-    }
-    .bestel{
-        font-size: 14px;
-    }
-
-    .smaak_img1{
-        height: 60px;
-        width: 60px;
-    }
-    .smaak_img2{
-        height: 60px;
-        width: 60px;
-    }
-    .smaak_img3{
-        height: 60px;
-        width: 60px;
-    }
 
     footer{
-        margin-top: 700px;
+        /* margin-top: 500px; */
     }
   }

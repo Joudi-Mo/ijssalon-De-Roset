@@ -35,9 +35,9 @@ session_start();
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="over-ons.php">Over ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="#" aria-label="Winkelmandje"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <?php
-                if (!$_SESSION["is_logged_in"]) {
+                <li><a href="cart.php" aria-label="Winkelmandje"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <?php
+                    if (!$_SESSION["is_logged_in"]) {
                 ?>
                     <li><a href="../login.php">Inloggen</a></li>
             </ul>
@@ -77,7 +77,7 @@ session_start();
                                 </div>
                                 <div class="info">
                                     <span class="prijs"><?php echo $product["price_per_kg"] ?>€</span>
-                                    <a class="bestel" href="#.php?id=<?php echo $product["id"] ?>">Bestel</a>
+                                    <a class="bestel" href="cart.php?id=<?php echo $product["id"] ?>">Bestel</a>
                                 </div>
                             </div>
                         <?php
