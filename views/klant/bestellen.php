@@ -7,6 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Ijssalon De Roset">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestellen</title>
     <link rel="stylesheet" href="../styles/bestellen.css">
@@ -34,7 +35,7 @@ session_start();
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="over-ons.php">Over ons</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="#" aria-label="Winkelmandje"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <?php
                 if (!$_SESSION["is_logged_in"]) {
                 ?>
@@ -44,7 +45,7 @@ session_start();
                 } else {
         ?>
             </ul>
-            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
+            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt="accout"></a>
         <?php
                 }
         ?>
@@ -103,7 +104,7 @@ session_start();
                 <h3>Smaak van de dag</h3>
                 <div class="smaak_img" style="background-color: <?php echo $product['smaak_kleur'] ?> ;"></div>
                 <span class="smaak__naam"><?php echo $product['name'] ?></span>
-                <a class="bestel" href="">Bestel</a>
+                <a class="bestel" href="#">Bestel</a>
             </div>
 
             <!-- Populaire smaken -->

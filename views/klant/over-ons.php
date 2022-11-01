@@ -34,7 +34,7 @@ session_start();
                 } else {
         ?>
             </ul>
-            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt=""></a>
+            <a href="account.php" class="cta"><img class="account" src="../../Assets/smileXD.jpg" alt="account"></a>
         <?php
                 }
         ?>
