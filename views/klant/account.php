@@ -29,8 +29,8 @@ if (!$_SESSION["is_logged_in"]) {
     require "../../Classes/Database.php";
     $sql = "SELECT * FROM `users` where id = $id";
 
-    if ($result = mysqli_query($conn, $sql)) {
-
+    if ($result = mysqli_query($conn, $sql)) 
+    {
         $user = mysqli_fetch_assoc($result);
     }
     ?>

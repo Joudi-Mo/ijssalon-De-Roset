@@ -16,7 +16,8 @@
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="producten_overzicht.php" class="nav-link text-dark">Producten</a></li>
             <li class="nav-item"><a href="medewerker_bestellingen.php" class="nav-link text-dark">Bestellingen</a></li>
-            <li class="nav-item"><a href="../login.php" class="btn btn-danger">Log out</a></li>
+            <li class="nav-item"><a href="medewerker_account.php" class="nav-link text-dark">Account</a></li>
+            <li class="nav-item"><a href="../login.php" class="btn btn-dark">Log out</a></li>
         </ul>
     </header>
 </div>
