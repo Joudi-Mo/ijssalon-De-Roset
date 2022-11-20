@@ -26,8 +26,8 @@
 
     $sql = "SELECT * FROM `users`";
 
-    if ($result = mysqli_query($conn, $sql)) {
-
+    if ($result = mysqli_query($conn, $sql)) 
+    {
         $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
     ?>
@@ -42,11 +42,10 @@
                 <th scope="col">Lastname</th>
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
-                <th scope="col">Date Of Birth</th>
+                <th scope="col">Phonenumber:</th>
                 <th scope="col">Address</th>
                 <th scope="col">Role</th>
                 <th scope="col">Delete</th>
-                <th scope="col">Update</th>
             </tr>
         </thead>
         <tbody>
@@ -63,7 +62,6 @@
                     <td><?php echo $user["address"] ?></td>
                     <td><?php echo $user["role"] ?></td>
                     <td><a href="klant_delete.php?id=<?php echo $user["id"] ?>"><i class="fa-solid fa-trash text-danger"></i></a> </td>
-                    <td><a class="btn btn-warning" href="klant_update.php?id=<?php echo $user["id"] ?>">Update</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
