@@ -1,52 +1,60 @@
 <?php
-//  include 'database.php';
+require "../../Classes/Database.php";
+
 if (isset($_POST["submit"])) { // als submit gevult is en niet staat aan NULL voert hij de statement uit
+
+    $id = $_POST["id"];
+    // var_dump($_POST);die;
+    // var_dump($_POST["bestelling"]);die;
+
+
+    $bestelling = trim($_POST["bestelling"]);
+    // $amount = trim($_POST["zipcode"]);
+    $submit = $_POST["submit"];
+
     if (
-        !empty($_POST["date"])     // ze moeten allemaal true zijn aka ze moeten niet leeg zijn
+        !empty($_POST["bestelling"])
         // && !empty($_POST["achternaam"])
-        // && !empty($_POST["email"])
-        // && !empty($_POST["wachtwoord"])
-        // && !empty($_POST["telefoonnummer"])
-        // && !empty($_POST["date"])
-        // && !empty($_POST["adress"])
-        // && !empty($_POST["zipcode"])
-        // && !empty($_POST["city"])
-
     ) {
-       
+
         // variabeles aan het zetten door post method te gebruiken
-        $id = $_SESSION['id'];
-        $date = $_POST["date"];
-        $method = $_POST["method"];
-        $recieved = "no";
-        $name = $_POST["name"];
-        $adress = $_POST["adress"];
-        $zipcode = $_POST["zipcode"];
-        $city = $_POST["city"];
-        $phonenumber = $_POST["phonenumber"];
+        // $name = $_POST["name"];
+        if($bestelling == 'afhalen'){
+            $afhalen = date('d-m-y h:i:s');
+            $bezorgen = null;
+        }
+        else{
+            $afhalen = null;
+            $bezorgen = date('d-m-y h:i:s');
+        }
+// var_dump($id);die;
+        // var_dump('echo');
+        // die;
+        $products = $_POST["smaken_id"];
 
-
-
-        $products = $_POST["productid"];
-        
         $product = explode(",", $products);
-
-        foreach ($product as $prod) : 
-
-            $sql = "INSERT INTO orders (user_id, product_id, date, ordermethod, isRecieved, username, adress, zipcode, city, phonenumber)
-            VALUES ('$id', '$prod','$date', '$method', '$recieved','$name', '$adress','$zipcode', '$city', '$phonenumber')";
+// var_dump($product);die;
+        foreach ($product as $prod) :
+            // var_dump($prod);die;
+            // $i = 1;
+            // $sql = "INSERT INTO orders (user_id, product_id, date, ordermethod, isRecieved, username, adress, zipcode, city, phonenumber)
+            // VALUES ('$id', '$prod','$date', '$method', '$recieved','$name', '$adress','$zipcode', '$city', '$phonenumber')";
+            $sql = "INSERT INTO `orders`(`user_id`, `product_id`, `amount`, `pickup`, `delivery`, `is_Recieved`) 
+                    VALUES ($id, $prod, 1, '2022-11-24', '2022-11-24','0')";
 
             // Voer de INSERT INTO STATEMENT uit/ execute de query in het database
-            mysqli_query($conn, $sql);
+            if (mysqli_query($conn, $sql)) {
+                // header("location: account.php");
+            }
         endforeach;
         //database connectie
-        
 
 
-      
+
+
 
         echo "Inserted successfully";
         mysqli_close($conn); // Sluit de database verbinding want er hoeven geen queries meer uitgevoerd te worden
-        header("location: http://localhost/deroset/bestellen.php");
+        header("location: bestellen.php");
     }
 }

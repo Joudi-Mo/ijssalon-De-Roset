@@ -1,7 +1,7 @@
 <?php
 session_start();
 $id = $_SESSION["id"];
-$pId = $_GET['id'];
+// $pId = $_GET['id'];
 
 
 ?>
@@ -62,7 +62,7 @@ $pId = $_GET['id'];
                     <div class="row">
                         <label for="afhalen">Afhalen</label>
                         <input type="radio" name="bestelling" id="afhalen" value="afhalen">
-                        <label for="bezorgen">Bezorgen</label>
+                        <label for="bezorgen">Bezorgen (+ 2.60€ bezorgkosten)</label>
                         <input type="radio" name="bestelling" id="bezorgen" value="bezorgen">
                     </div>
                     <div class="row">
@@ -82,17 +82,34 @@ $pId = $_GET['id'];
                             <input name="pnumber" type="text" id="pnummer" value="<?php echo $user['phonenumber'] ?>">
                         </div>
                     </div>
+                    <h2>Bezorgadres:</h2>
+                    <div class="row">
+                        <label for="huis">Factuuradres</label>
+                        <input type="radio" name="bestelling_adres" id="huis" value="afhalen">
+                        <label for="niet_huis">Andere adres:</label>
+                        <input type="radio" name="bestelling_adres" id="niet_huis" value="bezorgen">
+                    </div>
                     <div class="row">
                         <div class="column">
                             <label for="adres">Adres</label>
-                            <input name="adres" ype="text" id="adres" value="<?php echo $user['address'] ?>">
+                            <!-- <input name="adres" ype="text" id="adres" value="<?php echo $user['address'] ?>"> -->
+                            <input name="adres" ype="text" id="adres">
                         </div>
                         <div class="column">
                             <label for="postcode">Postcode</label>
-                            <input name="zipcode" type="text" id="postcode" value="<?php echo $user['zipcode'] ?>">
-
+                            <!-- <input name="zipcode" type="text" id="postcode" value="<?php echo $user['zipcode'] ?>"> -->
+                            <input name="zipcode" type="text" id="postcode">
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="column">
+                            <label for="postcode">Smaken</label>
+                            <input id="smaken_input" name="" type="text">
+                            <a id="deletebutton" onclick="deleteProduct()">Legen</a>
+                            <input id="smaken_id" name="smaken_id" type="text" value="">
+                        </div>
+                    </div>
+
                     <button name="submit">Bestel</button>
                     <!-- class="btn btn-warning" href="product_update.php?id=<?php echo $product["id"] ?>" -->
                 </form>

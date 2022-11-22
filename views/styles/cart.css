@@ -217,7 +217,12 @@ button{
     color: #fff;
     border-radius: 3px;
 }
-
+#deletebutton{
+    background-color: red;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+}
 /* End hero section*/
 
 /* Start footer */
